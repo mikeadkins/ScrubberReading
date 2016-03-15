@@ -1,75 +1,105 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <title>Scrubber Web Program</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" href="style.css">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
+    <div id="mainWrapper"> 
         <h1>Scrubber Program</h1>
-        <form action="//formdata.html">
-        Please select number of ports:
-        <input type="radio" name="ports" value="5"> 5
-        <input type="radio" name="ports" value="6"> 6 <br>
-        Enter width of duct: 
-        <input type="text" name="width"> <br>
-        Enter heigth of duct:
-        <input type="text" name="heigth"><br>
-        Number of measurements per port:
-        <input type="radio" name="perport" value="3"> 3
-        <input type="radio" name="perport" value="5"> 5 <br>
-        <button type="button" name="readings">Click to enter readings</button>
-        </form>
-        <table>
-                   <tr>
-        <th></th>
-        <th>Port 1</th>
-        <th>Port 2</th>
-        <th>Port 3</th>
-        <th>Port 4</th>
-        <th>Port 5</th>
-        <th>Port 6</th></tr>
-        <tr>
-            <th>Reading 1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th>Reading 2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th>Reading 3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-        <script src="//javascript.js"></script>
-        <footer>Written by Mike Adkins</footer>
+        
+       
+        <div id="left">
+            
+            Please select number of ports:
+            <input type="radio" name="port" value="5"> 5
+            <input type="radio" name="port" value="6"> 6 <br>
+            Enter width of duct: 
+            <input id="width" name="width"> <br>
+            Enter heigth of duct:
+            <input id="heigth" name="heigth"><br>
+            Enter thickness of top plate:
+            <input id="topPlate" name="topPlate"><br>
+            Number of measurements per port:
+            <input type="radio" name="perPort" value="3"> 3
+            <input type="radio" id="perPort" name="perPort" value="5"> 5 <br>
+            <p id="area">Area: </p>
+            <button type="button" class="button"name="readings" onclick= getDims();>Click to enter meausrements</button>
+            <button type="button"  class= "button" name="table" onclick=measurements();>Click to enter readings</button>
+        </div>
+
+            <div id="right">
+                <p id="firstMark">First mark:</p>
+                <p id="secondMark">Second mark:</p>
+                <p id="thirdMark">Third mark:</p>
+            </div>
+        
+        <div id="bottom">
+            <table>
+            <tr>
+            <th></th>
+            <th>Port 1</th>
+            <th>Port 2</th>
+            <th>Port 3</th>
+            <th>Port 4</th>
+            <th>Port 5</th>
+            <th>Port 6</th>
+            </tr>
+            <tr>
+                <th>Reading 1</th>
+                <td id="cell1.0"></td>
+                <td id="cell2.0"></td>
+                <td id="cell3.0"></td>
+                <td id="cell4.0"></td>
+                <td id="cell5.0"></td>
+                <td id="cell6.0"></td>
+            </tr>
+            <tr>
+                <th>Reading 2</th>
+                <td id="cell1.1"></td>
+                <td id="cell2.1"></td>
+                <td id="cell3.1"></td>
+                <td id="cell4.1"></td>
+                <td id="cell5.1"></td>
+                <td id="cell6.1"></td>
+            </tr>
+            <tr>
+                <th>Reading 3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="fiveMeas" style="display: none;"> 
+                <th>Reading 4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="fiveMeas"> 
+                <th>Reading 5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+
+        </div>
+        <script src="javascript.js"></script>
+        <footer>Created by RRLA || RRLA@alphanr.com</footer>
+
+    </div> 
     </body>
 </html>
