@@ -4,8 +4,8 @@
         
         <title>Scrubber Web Program</title>
         
-        <link rel="stylesheet" href="style.css">
-      
+        <link rel="stylesheet" href="scrubber_style.css">
+        <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
     <div id="mainWrapper"> 
@@ -15,8 +15,8 @@
         <div id="left">
             
             Please select number of ports:
-            <input type="radio" name="port" value="5"> 5
-            <input type="radio" name="port" value="6"> 6 <br>
+            <input type="radio" name="port" value="5" checked> 5
+            <input type="radio" id="sixPort" name="port" value="6"> 6 <br>
             Enter width of duct: 
             <input id="width" name="width"> <br>
             Enter heigth of duct:
@@ -24,7 +24,7 @@
             Enter thickness of top plate:
             <input id="topPlate" name="topPlate"><br>
             Number of measurements per port:
-            <input type="radio" name="perPort" value="3"> 3
+            <input type="radio" name="perPort" value="3" checked> 3
             <input type="radio" id="perPort" name="perPort" value="5"> 5 <br>
             <p id="area">Area: </p>
             <button type="button" class="button"name="readings" onclick= getDims();>Click to enter meausrements</button>
@@ -46,7 +46,7 @@
             <th>Port 3</th>
             <th>Port 4</th>
             <th>Port 5</th>
-            <th>Port 6</th>
+            <th id="sixPort1" style="display: none;">Port 6</th>
             </tr>
             <tr>
                 <th>Reading 1</th>
@@ -55,7 +55,7 @@
                 <td id="cell3.0"></td>
                 <td id="cell4.0"></td>
                 <td id="cell5.0"></td>
-                <td id="cell6.0"></td>
+                <td id="cell6.0" name="sixPort2" style="display: none;"></td>
             </tr>
             <tr>
                 <th>Reading 2</th>
@@ -64,35 +64,44 @@
                 <td id="cell3.1"></td>
                 <td id="cell4.1"></td>
                 <td id="cell5.1"></td>
-                <td id="cell6.1"></td>
+                <td id="cell6.1" name="sixPort3" style="display: none;"></td>
             </tr>
             <tr>
                 <th>Reading 3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="cell1.2"></td>
+                <td id="cell2.2"></td>
+                <td id="cell3.2"></td>
+                <td id="cell4.2"></td>
+                <td id="cell5.2"></td> 
+                <td id="cell6.2" name="sixPort4" style="display: none;"></td>
             </tr>
             
-            <tr class="fiveMeas" style="display: none;"> 
+            <tr id="fiveMeas" style="display: none;"> 
                 <th>Reading 4</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="cell1.3"></td>
+                <td id="cell2.3"></td>
+                <td id="cell3.3"></td>
+                <td id="cell4.3"></td>
+                <td id="cell5.3"></td>
+                <td id="cell6.3" name="sixPort5" style="display: none;"></td>
             </tr>
-            <tr class="fiveMeas"> 
+            <tr id="fiveMeas2" style="display: none;"> 
                 <th>Reading 5</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="cell1.4"></td>
+                <td id="cell2.4"></td>
+                <td id="cell3.4"></td>
+                <td id="cell4.4"></td>
+                <td id="cell5.4"></td>
+                <td id="cell6.4" name="sixPort6" style="display: none;"></td>
+            </tr>
+            <tr> 
+                <th>Total</th>
+                <td id="total1"></td>
+                <td id="total2"></td>
+                <td id="total3"></td>
+                <td id="total4"></td>
+                <td id="total5"></td>
+                <td id="total6" name="sixPorttotal" style="display: none;"></td>
             </tr>
             </table>
 
