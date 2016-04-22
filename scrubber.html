@@ -22,12 +22,12 @@
             Enter heigth of duct:
             <input id="heigth" name="heigth"><br>
             Enter thickness of top plate:
-            <input id="topPlate" name="topPlate"><br>
+            <input id="topPlate" name="topPlate" value="0"><br>
             Number of measurements per port:
             <input type="radio" name="perPort" value="3" checked> 3
             <input type="radio" id="perPort" name="perPort" value="5"> 5 <br>
             <p id="area">Area: </p>
-            <button type="button" class="button"name="readings" onclick= getDims();>Click to enter meausrements</button>
+            <button type="button" class="button" name="readings" onclick= getDims();>Click to enter meausrements</button>
             <button type="button"  class= "button" name="table" onclick=measurements();>Click to enter readings</button>
         </div>
 
@@ -35,6 +35,9 @@
                 <p id="firstMark">First mark:</p>
                 <p id="secondMark">Second mark:</p>
                 <p id="thirdMark">Third mark:</p>
+                <p id="fourthMark" style="display:none;">Fourth mark:</p>
+                <p id="fifthMark" style="display:none;">Fifth mark:</p>
+
             </div>
         
         <div id="bottom">
