@@ -1,0 +1,83 @@
+html{
+	background-color: #F8F8F8;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+#mainWrapper{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+h1{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+table, th, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	
+}
+input{
+	width: auto;
+	border: 1px solid black;
+	margin:  5px;
+	padding: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #CFCFCF;
+  border: 1px solid black;
+  border-radius: 1px;
+  box-shadow: 0 4px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#left{
+	padding: 5px;
+	float: left;
+	width:400px;
+	border:2px solid black;
+	margin-left: 5%;
+	margin-top: 30px;
+}
+#right{
+	float:left;
+	width:250px;
+	border:2px solid black;
+	padding-left: 5px;
+	margin-left: 5%;
+	margin-top: 30px;
+}
+#bottom{
+	clear:both;
+	margin-left: 5%;
+	padding-top: 30px;
+	margin-top: 30px;
+}
+
+
+
+footer{
+	padding-top: 15px;
+	color: white;
+	background-color: black;
+	margin-top: 5%;
+	font-size: 14px;
+	text-align: center;
+	padding: 2px;
+}
