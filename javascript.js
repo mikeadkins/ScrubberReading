@@ -72,6 +72,24 @@ cfm=parseFloat(Math.round(average*area));
 document.getElementById("cfm").innerHTML=cfm;
 }
 
+
+function correlation(){
+    var cf;
+    cf=0;
+    if (numofPorts==false && perPort==false){
+        cf= parseFloat(average/measArray[7])}
+    else if (numofPorts==true && perPort==false) {
+        cf= parseFloat(average / ((measArray[7]+measArray[10])/2))    
+        }    
+    else if (numofPorts==false && perPort==true) {
+        cf= parseFloat(average/measArray[12])
+    }   
+    else if (numofPorts==true && perPort==true) {
+        cf= parseFloat(average / ((measArray[12]+measArray[17])/2)) 
+     } 
+    cf=cf.toFixed(2);    
+    document.getElementById("cf").innerHTML=cf;    
+}
     
 function measurements(){
     for (j =1; j<numofColumns; j++) {
@@ -84,5 +102,6 @@ function measurements(){
         }
     }
     totals();
+    correlation();
 }
 
